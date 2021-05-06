@@ -29,7 +29,7 @@ public class CustomerTest
         testCustomer.addRental(rental3);
 
         assertEquals(
-                "Rental Record for TestCustomer\n\tTitle\t\tDays\tAmount\n\tTest Movie 1\t\t1\t2.0\n\tTest Movie 2\t\t4\t5.0\n\tTest Movie 3\t\t2\t2.0\nAmount owed is 9.0\nYou earned 3 frequent renter points",
+                "Rental Record for TestCustomer\n\tTitle\t\tDays\tAmount\n\tTest Movie 1\t\t1\t1.5\n\tTest Movie 2\t\t4\t12.0\n\tTest Movie 3\t\t2\t2.0\nAmount owed is 15.5\nYou earned 3 frequent renter points",
                 testCustomer.statement());
     }
 
@@ -50,7 +50,7 @@ public class CustomerTest
         testCustomer.addRental(rental3);
 
         assertEquals(
-                "<h1>Rentals for <em>TestCustomer</em></h1><p>\nTest Movie 1: 2.0<br>\nTest Movie 2: 5.0<br>\nTest Movie 3: 2.0<br>\n<p>You owe <em>9.0</em></p>\nOn this rental you earned <em>3</em> frequent renter points</p>",
+                "<h1>Rentals for <em>TestCustomer</em></h1><p>\nTest Movie 1: 1.5<br>\nTest Movie 2: 12.0<br>\nTest Movie 3: 2.0<br>\n<p>You owe <em>15.5</em></p>\nOn this rental you earned <em>3</em> frequent renter points</p>",
                 testCustomer.htmlStatement());
     }
 
