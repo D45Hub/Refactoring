@@ -42,4 +42,14 @@ public class Rental
         }
         return result;
     }
+
+    public int calculateRenterPoints()
+    {
+        if ((movie.getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1)
+        {
+            return 2;
+        }
+
+        return 1;
+    }
 }
