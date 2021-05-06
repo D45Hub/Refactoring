@@ -34,6 +34,27 @@ public class CustomerTest
     }
 
     @Test
+    public void testCustomerHTMLStatement()
+    {
+        Movie movie1 = new Movie("Test Movie 1", 100);
+        Movie movie2 = new Movie("Test Movie 2", 200);
+        Movie movie3 = new Movie("Test Movie 3", 50);
+
+        Rental rental1 = new Rental(movie1, 1);
+        Rental rental2 = new Rental(movie2, 4);
+        Rental rental3 = new Rental(movie3, 2);
+
+        Customer testCustomer = new Customer("TestCustomer");
+        testCustomer.addRental(rental1);
+        testCustomer.addRental(rental2);
+        testCustomer.addRental(rental3);
+
+        assertEquals(
+                "<h1>Rentals for <em>TestCustomer</em></h1><p>\nTest Movie 1: 0.0<br>\nTest Movie 2: 0.0<br>\nTest Movie 3: 0.0<br>\n<p>You owe <em>0.0</em></p>\nOn this rental you earned <em>3</em> frequent renter points</p>",
+                testCustomer.htmlStatement());
+    }
+
+    @Test
     public void testCustomerName()
     {
         Customer testCustomer = new Customer("TestCustomer");

@@ -61,9 +61,9 @@ public class Customer
                     .valueOf(each.getCharge()) + "" + "<br>\n";
         }
         // add footer lines
-        result += "<p>You owe <em>" + String.valueOf(getTotalCharge()) + "</em><p>\n";
+        result += "<p>You owe <em>" + String.valueOf(getTotalCharge()) + "</em></p>\n";
         result += "On this rental you earned <em>" + String
-                .valueOf(getTotalFrequentRenterPoints()) + "</em> frequent renter points<p>";
+                .valueOf(getTotalFrequentRenterPoints()) + "</em> frequent renter points</p>";
         return result;
     }
 
