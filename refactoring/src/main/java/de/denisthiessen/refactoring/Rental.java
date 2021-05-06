@@ -1,6 +1,6 @@
 package de.denisthiessen.refactoring;
 
-class Rental
+public class Rental
 {
     private Movie movie;
     private int daysRented;
